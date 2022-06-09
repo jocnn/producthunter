@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { Global, css } from "@emotion/react";
 
 import Header from "./header";
@@ -10,6 +11,7 @@ const Layout = ({ children }) => {
 					:root {
 						--gris: #3d3d3d;
 						--gris2: #6f6f6f;
+            --gris3: #e1e1e1;
 						--naranja: #da552f;
 					}
 
@@ -57,6 +59,11 @@ const Layout = ({ children }) => {
 					}
 				`}
 			/>
+			
+			<Head>
+				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+				<title>Product Hunt Firebase y Next.JS</title>
+			</Head>
 
 			<Header />
 
