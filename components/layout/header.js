@@ -23,7 +23,7 @@ const Header = () => {
 	return (
 		<header className={css.header}>
 			<Div_Query_Display>
-				<div>
+				<div className={css.display}>
           <Link href={'/'}>
 					  <p className={css.logo}>P</p>
           </Link>
