@@ -1,15 +1,12 @@
 import Link from "next/link"
 import styled from "@emotion/styled"
+import css from '../../styles/Header.module.css'
 
 import Search from "../ui/search"
 import Navigation from "./navigation"
+import Buttom from "../ui/buttom"
 
-const Header_Styled = styled.header`
-  border-bottom: 2px solid var(--gris3);
-  padding: 1rem 0;
-`
-
-const Div_Styled = styled.div`
+const Div_Query_Display = styled.div`
   max-width: 1200px;
   width: 95%;
   margin: 0 auto;
@@ -19,22 +16,16 @@ const Div_Styled = styled.div`
   }
 `
 
-const P_Styled = styled.p`
-  color: var(--naranja);
-  font-size: 4rem;
-  line-height: 0;
-  font-weight: 700;
-  font-family: 'Roboto Slab', serif;
-  margin-right: 2rem;
-`
-
 const Header = () => {
+
+  const usuario = false
+
 	return (
-		<Header_Styled>
-			<Div_Styled>
+		<header className={css.header}>
+			<Div_Query_Display>
 				<div>
           <Link href={'/'}>
-					  <P_Styled>P</P_Styled>
+					  <p className={css.logo}>P</p>
           </Link>
 
 					<Search />
@@ -42,19 +33,40 @@ const Header = () => {
 					<Navigation />
 
 				</div>
-				<div>
 
-          <p>Hola: usuario</p>
+				<div className={css.display}>
 
-          <button
-            type="button"
-          >Cerrar Sesión</button>
-        
-          <Link href={'/'}>Iniciar Sesión</Link>
-          <Link href={'/'}>Crear Cuenta</Link>
+          {
+            usuario ? (
+              <>
+                <p className={css.marginRight}>Hola: usuario</p>
+
+                <Buttom
+                  bgColor='true'
+                >Cerrar Sesión</Buttom>
+
+              </>
+            ) : (
+              <>
+                <Link href={'/'}>
+                  <Buttom
+                    bgColor='true'
+                  >
+                    Iniciar Sesión
+                  </Buttom>
+                </Link>
+                <Link href={'/'}>
+                  <Buttom>
+                    Crear Cuenta
+                  </Buttom>
+                </Link>              
+              </>
+            )
+          }
+
         </div>
-			</Div_Styled>
-		</Header_Styled>
+			</Div_Query_Display>
+		</header>
 	)
 }
 
