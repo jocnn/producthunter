@@ -20,3 +20,44 @@
   font-family: 'Roboto Slab', serif;
   margin-right: 2rem;
 }
+
+.inputTextSearch {
+  border: 1px solid var(--gris3);
+  padding: 1rem;
+  min-width: 300px;
+}
+
+.positionRelative {
+  position: relative;
+}
+
+.inputSubmit {
+  height: 3rem;
+  width: 3rem;
+  display: block;
+  background-size: 4rem;
+  background-image: url('/static/img/buscar.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 1rem;
+  top: 1px;
+  background-color: white;
+  border: none;
+  text-indent: -999px;
+}
+.inputSubmit:hover {
+  cursor: pointer;
+}
+
+.navEnlace {
+  padding-left: 2rem;
+}
+.navEnlace a {
+  font-size: 1.8rem;
+  margin-left: 2rem;
+  color: var(--gris2);
+  font-family: 'PT Sans', sans-serif;
+}
+.navEnlace a:last-of-type {
+  margin-right: 0;
+}
