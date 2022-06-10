@@ -62,3 +62,8 @@ a {
 .bg-white {
   background-color: #FFF;
 }
+
+#my_h1 {
+  text-align: center;
+  margin-top: 5rem;
+}
