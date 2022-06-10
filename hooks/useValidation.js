@@ -16,7 +16,7 @@ const useValidation = (stateInit, validar, fn) => {
 
       setSubmitForm(false)
     }
-  }, [])
+  }, [errores])
 
   const handleChange = e => {
     setValores({
@@ -30,7 +30,7 @@ const useValidation = (stateInit, validar, fn) => {
 
     const erroresValidation = validar(valores)
     setErrores(erroresValidation)
-    submitForm(true)
+    setSubmitForm(true)
   }
 
   return {
