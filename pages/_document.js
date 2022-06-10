@@ -14,7 +14,6 @@ export default function Document() {
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" content="strict-origin-when-cross-origin" />
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="/static/css/app.css" />
 			</Head>
       <body>
         <Main />
