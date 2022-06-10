@@ -25,7 +25,7 @@ const Header = () => {
 			<Div_Query_Display>
 				<div className={css.display}>
           <Link href={'/'}>
-					  <p className={css.logo}>P</p>
+					  <a className={css.logo}>P</a>
           </Link>
 
 					<Search />
@@ -48,14 +48,14 @@ const Header = () => {
               </>
             ) : (
               <>
-                <Link href={'/'}>
+                <Link href={'/log-in'}>
                   <Buttom
                     bgColor='true'
                   >
                     Iniciar Sesión
                   </Buttom>
                 </Link>
-                <Link href={'/'}>
+                <Link href={'/sign-up'}>
                   <Buttom>
                     Crear Cuenta
                   </Buttom>
