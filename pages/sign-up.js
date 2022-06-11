@@ -49,6 +49,10 @@ const SignUp = () => {
             />
           </div>
 
+          {
+            errores.nombre && <p className={css.errors}>{errores.nombre}</p>
+          }
+
           <div className={css.field}>
             <label htmlFor="email">Correo Electrónico</label>
             <input
@@ -63,6 +67,10 @@ const SignUp = () => {
             />
           </div>
 
+          {
+            errores.email && <p className={css.errors}>{errores.email}</p>
+          }
+
           <div className={css.field}>
             <label htmlFor="password">Contraseña</label>
             <input
@@ -75,6 +83,10 @@ const SignUp = () => {
               onChange={handleChange}
             />
           </div>
+
+          {
+            errores.password && <p className={css.errors}>{errores.password}</p>
+          }
 
           <input
             className={css.inputSubmitField}
