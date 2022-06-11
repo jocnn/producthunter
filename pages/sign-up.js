@@ -15,9 +15,9 @@ const SignUp = () => {
 	const {
     valores,
     errores,
-    submitForm,
     handleChange,
     handleSubmit,
+    handleBlur,
   } = useValidation(STATE_INITIAL, validateSignUp, createAccount)
 
   const { nombre, email, password } = valores
@@ -46,6 +46,7 @@ const SignUp = () => {
               autoComplete="username"
               value={nombre}
               onChange={handleChange}
+              onBlur={handleBlur}
             />
           </div>
 
@@ -64,6 +65,7 @@ const SignUp = () => {
               validate="true"
               value={email}
               onChange={handleChange}
+              onBlur={handleBlur}
             />
           </div>
 
@@ -81,6 +83,7 @@ const SignUp = () => {
               autoComplete="new-password"
               value={password}
               onChange={handleChange}
+              onBlur={handleBlur}
             />
           </div>
 
