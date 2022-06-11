@@ -4,13 +4,13 @@ import validateSignUp from "../validation/validarSignUp";
 
 import Layout from "../components/layout/layout";
 
-const SignUp = () => {
+const STATE_INITIAL = {
+  nombre: "",
+  email: "",
+  password: "",
+};
 
-	const STATE_INITIAL = {
-		nombre: "",
-		email: "",
-		password: "",
-	};
+const SignUp = () => {
 
 	const {
     valores,
