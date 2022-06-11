@@ -10,7 +10,7 @@ export default function validateSignUp(valores) {
 	} else if (
 		!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(valores.email)
 	) {
-		errores.mail = "Email no válido";
+		errores.email = "Email no válido";
 	}
 
 	// validar el password
