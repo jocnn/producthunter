@@ -5,12 +5,15 @@ const FirebaseContext = createContext()
 
 const FirebaseProvider = ({children}) => {
 
-  console.log(firebase)
+  const handleSignUp = (fields_SignUp) => {
+    console.log(fields_SignUp)
+  }
 
   return (
     <FirebaseContext.Provider 
       value={{
-        firebase
+        firebase,
+        handleSignUp,
       }}
     >
       {children}
