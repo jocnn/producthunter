@@ -1,5 +1,7 @@
 import css from "../styles/SignUp.module.css";
 import useValidation from "../hooks/useValidation";
+import useFirebase from "../firebase/hook/useFirebase"
+
 import validateSignUp from "../validation/validarSignUp";
 
 import Layout from "../components/layout/layout";
@@ -8,9 +10,11 @@ const STATE_INITIAL = {
   nombre: "",
   email: "",
   password: "",
-};
+}
 
 const SignUp = () => {
+
+  const { handleSignUp } = useFirebase()
 
 	const {
     valores,
@@ -18,12 +22,12 @@ const SignUp = () => {
     handleChange,
     handleSubmit,
     handleBlur,
-  } = useValidation(STATE_INITIAL, validateSignUp, createAccount)
+  } = useValidation(STATE_INITIAL, validateSignUp, handleCreateAccount)
 
   const { nombre, email, password } = valores
 
-  function createAccount() {
-    console.log('creando cuenta...')
+  function handleCreateAccount() {
+    handleSignUp(valores)
   }
 
 	return (
