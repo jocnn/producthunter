@@ -1,12 +1,11 @@
-import { initializeApp } from "firebase/app";
+import { initializeApp } from "firebase/app"
 
 import firebaseConfig from "./config"
 
+let app = null
 class Firebase {
   constructor() {
-    if (!initializeApp.length) {
-      initializeApp({firebaseConfig});
-    }
+    app = initializeApp({firebaseConfig})
   }
 }
 
